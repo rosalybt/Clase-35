@@ -54,25 +54,26 @@ const calcularTotal = () => {
     
     if (credito.checked) {
         resultadoRecargo = recargoTarjeta()
-        
+
     }
     else {
         resultadoRecargo = 0
-        
+        recargo.textContent = resultadoRecargo
     }
     if (envioOpcion.checked) {
         resultadoEnvio = recargoEnvio()
     }
     else {
         resultadoEnvio = 0
-       
+        envio.textContent = resultadoEnvio
+
     }
     if (tarjetaDescuento.checked) {
         resultadoDescuento = aplicarDescuento()
     }
     else {
         resultadoDescuento = 0
-       
+        descuento.textContent = resultadoDescuento
     }
     
     let totalReal = subtotalNumero + resultadoEnvio + resultadoRecargo + resultadoDescuento
